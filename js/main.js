@@ -9,3 +9,10 @@ function getRandomNumber(from, to){
   return randomNumber;
 }
 getRandomNumber();
+
+//функция проверки длины строки
+function checkCommentMax(commentString, maxLength){
+  return commentString.length <= maxLength;
+}
+
+checkCommentMax();
