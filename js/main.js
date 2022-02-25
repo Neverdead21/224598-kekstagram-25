@@ -4,7 +4,7 @@ function getRandomNumber(from, to){
   if(from < 0 || to < 0){
     return;
   } else {
-    randomNumber = Math.floor(Math.random()*(to-from) + from);
+    randomNumber = Math.floor(Math.random()*(to - from + 1 ) + from);
   }
   return randomNumber;
 }
