@@ -85,9 +85,8 @@ const generateComment = () => ({
   name: getRandomArrayElement(NAMES),
 });
 
-let i = 1;
-const makePhotoDescription = () =>{
-  const id = i++;
+const makePhotoDescription = (_, index) =>{
+  const id = index+1;
   return {
     id: id,
     url: `photos/${id}.jpg`,
