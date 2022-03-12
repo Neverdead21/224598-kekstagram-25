@@ -9,7 +9,9 @@ const getRandomNumber = (from, to) => {
   return randomNumber;
 };
 //функция проверки длины строки
-//const checkCommentMax = (commentString, maxLength) => commentString.length <= maxLength;
+const checkCommentMax = (commentString, maxLength) => commentString.length <= maxLength;
+
+checkCommentMax();
 
 const NAMES = [
   'Макар',
@@ -94,4 +96,6 @@ const makePhotoDescription = () =>{
     comments: Array.from ({length: getRandomNumber(1, 3)}, generateComment),
   };
 };
-const photoDescriptionSet = () =>Array.from({length:25}, makePhotoDescription);
+const photoDescriptionSet = () => Array.from({length:25}, makePhotoDescription);
+
+photoDescriptionSet();
