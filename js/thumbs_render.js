@@ -6,14 +6,15 @@ const TEMPLATE = document.querySelector('#picture')
   .content
   .querySelector('a');
 
-const elementsFragment = document.createDocumentFragment();
+
 const thumbnailsRender = () => {
+  const elementsFragment = document.createDocumentFragment();
   photoSet.forEach(({url, likes, comments}) => {
-    const ELEMENT = TEMPLATE.cloneNode(true);
-    ELEMENT.querySelector('img').src = url;
-    ELEMENT.querySelector('.picture__likes').textContent = likes;
-    ELEMENT.querySelector('.picture__comments').textContent = comments.length;
-    elementsFragment.append(ELEMENT);
+    const element = TEMPLATE.cloneNode(true);
+    element.querySelector('img').src = url;
+    element.querySelector('.picture__likes').textContent = likes;
+    element.querySelector('.picture__comments').textContent = comments.length;
+    elementsFragment.append(element);
   });
   CONTAINER.append(elementsFragment);
 };
